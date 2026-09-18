@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowUpRight, Asterisk, Compass, DraftingCompass, Hammer, KeyRound, MessagesSquare } from "lucide-react";
@@ -226,7 +227,7 @@ export function Process() {
                 </button>
               );
             })}
-            <a href="/#contact" className="btn-sweep-light group flex items-center justify-between border border-[#F3EBDD]/70 px-8 py-6">
+            <Link href="/#contact" className="btn-sweep-light group flex items-center justify-between border border-[#F3EBDD]/70 px-8 py-6">
               <span>
                 <span className="label text-white/50">READY WHEN YOU ARE</span>
                 <span className="display mt-2 block text-[30px]">Begin with Act 01 — Consultation</span>
@@ -234,7 +235,7 @@ export function Process() {
               <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F3EBDD] text-[#1D1D1B] transition-transform duration-500 group-hover:translate-x-1">
                 <ArrowUpRight size={20} strokeWidth={1.5} />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
 

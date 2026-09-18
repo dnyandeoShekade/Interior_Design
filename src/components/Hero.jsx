@@ -76,6 +76,7 @@ export default function Hero() {
             <img
               {...heroDesktopRest}
               srcSet={heroDesktopSrcSet}
+              alt={HERO_ALT}
               className="hero-zoom object-cover"
             />
           </picture>
