@@ -34,6 +34,7 @@ export const processSteps = [
     text: "We begin by understanding your vision, lifestyle, property and ambitions.",
     duration: "WEEK 01",
     note: "Site walk · lifestyle interview · ambition mapping",
+    image: U("photo-1600880292203-757bb62b4baf", 1200),
   },
   {
     index: "02",
@@ -41,6 +42,7 @@ export const processSteps = [
     text: "Layouts, materials, lighting and architectural direction take shape.",
     duration: "WEEKS 02–03",
     note: "Moodboards · spatial studies · material palette",
+    image: U("photo-1503387762-592deb58ef4e", 1200),
   },
   {
     index: "03",
@@ -48,6 +50,7 @@ export const processSteps = [
     text: "Every detail is refined from furniture to finishes.",
     duration: "WEEKS 04–08",
     note: "Drawings · joinery details · curated selections",
+    image: U("photo-1616486338812-3dadae4b4ace", 1200),
   },
   {
     index: "04",
@@ -55,6 +58,7 @@ export const processSteps = [
     text: "Craftsmanship and project coordination bring the design to life.",
     duration: "MONTHS 03–08",
     note: "Site supervision · craftsmen · quality control",
+    image: U("photo-1504148455328-c376907d081c", 1200),
   },
   {
     index: "05",
@@ -62,6 +66,7 @@ export const processSteps = [
     text: "Your completed space, ready to be lived in.",
     duration: "HANDOVER",
     note: "Styling · walkthrough · aftercare",
+    image: U("photo-1618221195710-dd6b41faaea6", 1200),
   },
 ];
 
