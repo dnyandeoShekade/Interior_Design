@@ -3,6 +3,8 @@ export const U = (id, w = 1600) =>
 
 export const IMAGES = {
   hero: U("photo-1600210492486-724fe5c67fb0", 2200),
+  // dedicated HD portrait crop for small screens (9:16, optimized for mobile LCP)
+  heroMobile: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1080&h=1920&auto=format&fit=crop",
   intro: U("photo-1618221195710-dd6b41faaea6", 1200),
   introSmall: U("photo-1616486338812-3dadae4b4ace", 800),
   film: U("photo-1600585154340-be6161a56a0c", 2200),

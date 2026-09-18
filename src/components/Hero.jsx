@@ -1,9 +1,33 @@
 "use client";
 import { useEffect, useRef } from "react";
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { IMAGES } from "../data/projects";
+
+/* Art direction: dedicated HD portrait image on small screens,
+   landscape hero on desktop. Official Next.js getImageProps pattern —
+   the browser only downloads the variant matching its viewport. */
+const HERO_ALT = "Luxury living room with floor to ceiling glass looking onto pine forest";
+const {
+  props: { srcSet: heroDesktopSrcSet, ...heroDesktopRest },
+} = getImageProps({
+  src: IMAGES.hero,
+  alt: HERO_ALT,
+  fill: true,
+  sizes: "100vw",
+  quality: 80,
+  fetchPriority: "high",
+});
+const {
+  props: { srcSet: heroMobileSrcSet },
+} = getImageProps({
+  src: IMAGES.heroMobile,
+  alt: HERO_ALT,
+  fill: true,
+  sizes: "100vw",
+  quality: 80,
+});
 
 function StaggerTitle({ text, base = 250 }) {
   return (
@@ -47,14 +71,14 @@ export default function Hero() {
     <section className="relative h-[100svh] min-h-[620px] overflow-hidden bg-[#1D1D1B] text-white" aria-label="Noiré Studio intro">
       <div ref={bgRef} className="absolute inset-0 will-change-transform">
         <div className="hero-drift absolute inset-[-4%]">
-          <Image
-            src={IMAGES.hero}
-            alt="Luxury living room with floor to ceiling glass looking onto pine forest"
-            fill
-            priority
-            sizes="100vw"
-            className="hero-zoom object-cover"
-          />
+          <picture className="absolute inset-0">
+            <source media="(max-width: 767px)" srcSet={heroMobileSrcSet} />
+            <img
+              {...heroDesktopRest}
+              srcSet={heroDesktopSrcSet}
+              className="hero-zoom object-cover"
+            />
+          </picture>
         </div>
         {/* cinematic dark treatment like reference */}
         <div className="absolute inset-0 bg-black/45" />
